@@ -17,7 +17,7 @@ Utiliser readline-sync pour l'interaction avec l'utilisateur. */
 const readlineSync = require('readline-sync')
 const chalk = require('chalk')
 
-let name = readlineSync.question('please usage: node interMajorityTest.js firstName, lastName and age')
+let start = readlineSync.question('please usage: node interMajorityTest.js firstName, lastName and age')
 
 const americanCanVote = (usFirstName, usLastName, usAge) => {
     if (usAge < 21) {
@@ -26,16 +26,6 @@ const americanCanVote = (usFirstName, usLastName, usAge) => {
     console.log(chalk.blue(console.log(`Etant américain ${usFirstName} ${usLastName}, vous êtes majeur, vous pouvez voter!`)))
 }
 }
-
-if (process.argv.length !== 5) {
-    console.log(chalk.red('usage: node interMajorityTest.js firstName, lastName and age'))
-    process.exit(1)
-  }
-
-  if (isNaN(process.argv[4])) {
-    console.log(chalk.red(`Error: ${process.argv[2]} is not a number.`))
-    process.exit(1)
-  }
 
   let usFirstName = (process.argv[2])
   let usLastName = (process.argv[3])
