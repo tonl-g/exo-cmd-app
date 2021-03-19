@@ -90,15 +90,23 @@ let question1 = ['Langage', 'Compilateur']
       console.log('Please select between réponse 1 or réponse 2')
   }
 
-  const countPoint = (index1, index2, index3,index4, index5) => {
-    let counter = 0
-    if (index1 === 0 || index2 === 0 || index3 === 1 ||index4 === 1 || index5 === 0) {
-      counter += 1
-        console.log(`Vous avez ${counter} points sur 5!`)
+  const countPoint = (counter) => {
+    let count = 0
+    if (index1 === 0) {
+      count += 1
+      if (index2 === 0) 
+        count += 1
+        if (index3 === 1) 
+          count += 1
+          if (index4 === 1) 
+            count += 1
+            if (index5 === 0) 
+              count += 1
+        console.log(`Vous avez ${count} points sur 5!`)
     } else {
-      console.log(`Vous avez ${counter} points sur 5!`)
+      console.log(`Vous avez ${count} points sur 5!`)
     }
-    }
+  }
     
 countPoint()
 
