@@ -25,7 +25,7 @@ const findMagicNumber = (nb) => {
 }
 
   if (process.argv.length !== 3) {
-    console.log(chalk.red('usage: node guessNumber.js number to find a magic number'))
+    console.log(chalk.blue('usage: node guessNumber.js number to find a magic number'))
     process.exit(1)
   }
 
