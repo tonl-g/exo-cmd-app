@@ -22,3 +22,84 @@ Question 5: Ethereum est une blockchain publique:
 
 Utiliser readline-sync pour l'interaction avec l'utilisateur. */
 
+const readlineSync = require('readline-sync')
+const chalk = require('chalk')
+
+let question1 = ['Langage', 'Compilateur']
+  let index1 = readlineSync.keyInSelect(question1, 'Question 1: Le C++ est un:')
+  switch (index1) {
+    case 0:
+      console.log('Langage')
+      break
+    case 1:
+      console.log('Compilateur')
+      break
+    default:
+      console.log('Please select between réponse 1 or réponse 2')
+  }
+
+  let question2 = ['Vrai', 'Faux']
+  let index2 = readlineSync.keyInSelect(question2, 'TypeScript est une évolution de Javascript:')
+  switch (index2) {
+    case 0:
+      console.log('Vrai')
+      break
+    case 1:
+      console.log('Faux')
+      break
+    default:
+      console.log('Please select between réponse 1 or réponse 2')
+  }
+
+  let question3 = ['Vrai', 'Faux']
+  let index3 = readlineSync.keyInSelect(question3, 'Lire les cours avant de faire les exercices est inutile:')
+  switch (index3) {
+    case 0:
+      console.log('Vrai')
+      break
+    case 1:
+      console.log('Faux')
+      break
+    default:
+      console.log('Please select between réponse 1 or réponse 2')
+  }
+
+  let question4 = ['Vrai', 'Faux']
+  let index4 = readlineSync.keyInSelect(question4, 'react.js a été developpé par Google:')
+  switch (index4) {
+    case 0:
+      console.log('Vrai')
+      break
+    case 1:
+      console.log('Faux')
+      break
+    default:
+      console.log('Please select between réponse 1 or réponse 2')
+  }
+
+  let question5 = ['Vrai', 'Faux']
+  let index5 = readlineSync.keyInSelect(question5, 'Ethereum est une blockchain publique:')
+  switch (index5) {
+    case 0:
+      console.log('Vrai')
+      break
+    case 1:
+      console.log('Faux')
+      break
+    default:
+      console.log('Please select between réponse 1 or réponse 2')
+  }
+
+  const countPoint = (index1, index2, index3,index4, index5) => {
+    let counter = 0
+    if (index1 === 0 || index2 === 0 || index3 === 1 ||index4 === 1 || index5 === 0) {
+      counter += 1
+        console.log(`Vous avez ${counter} points sur 5!`)
+    } else {
+      console.log(`Vous avez ${counter} points sur 5!`)
+    }
+    }
+    
+countPoint()
+
+
