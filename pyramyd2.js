@@ -7,6 +7,7 @@ AAA
 AA
 A */
 
+const readlineSync = require('readline-sync')
 const chalk = require('chalk')
 
 const showStars = (nbStars) => {
@@ -15,8 +16,8 @@ const showStars = (nbStars) => {
     }
 }
 
-const reverseShowStars = (nbStars) => {
-    for (let i = 1; i >= nbStars; i -= 1) {
+const reverseShowStars = (nbStars, rev) => {
+    for (let i = nbStars; i >= 1; --i) {
     console.log(chalk.blue(str.repeat(i)))
     }
 } 
@@ -31,8 +32,12 @@ let nb = Number(process.argv[2])
 let str = (process.argv[3])
 let rev = (process.argv[4])
 
-reverseShowStars(nb, str, rev)
-showStars(nb, str)
+if (rev === '-r') {
+    reverseShowStars(nb, str, rev)
+} else {
+    showStars(nb, str)
+}
+
 
 
 

@@ -24,6 +24,3 @@ const showStars = (nbStars) => {
   let nb = Number(process.argv[2])
   let str = (process.argv[3])
   showStars(nb)
-
-
-
