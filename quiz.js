@@ -35,7 +35,7 @@ let question1 = ['Langage', 'Compilateur']
       console.log('Compilateur')
       break
     default:
-      console.log('Please select between réponse 1 or réponse 2')
+      console.log(chalk.red('Please select between réponse 1 or réponse 2'))
   }
 
   let question2 = ['Vrai', 'Faux']
@@ -48,7 +48,7 @@ let question1 = ['Langage', 'Compilateur']
       console.log('Faux')
       break
     default:
-      console.log('Please select between réponse 1 or réponse 2')
+      console.log(chalk.red('Please select between réponse 1 or réponse 2'))
   }
 
   let question3 = ['Vrai', 'Faux']
@@ -61,7 +61,7 @@ let question1 = ['Langage', 'Compilateur']
       console.log('Faux')
       break
     default:
-      console.log('Please select between réponse 1 or réponse 2')
+      console.log(chalk.red('Please select between réponse 1 or réponse 2'))
   }
 
   let question4 = ['Vrai', 'Faux']
@@ -74,7 +74,7 @@ let question1 = ['Langage', 'Compilateur']
       console.log('Faux')
       break
     default:
-      console.log('Please select between réponse 1 or réponse 2')
+      console.log(chalk.red('Please select between réponse 1 or réponse 2'))
   }
 
   let question5 = ['Vrai', 'Faux']
@@ -87,12 +87,12 @@ let question1 = ['Langage', 'Compilateur']
       console.log('Faux')
       break
     default:
-      console.log('Please select between réponse 1 or réponse 2')
+      console.log(chalk.red('Please select between réponse 1 or réponse 2'))
   }
 
   const countPoint = (counter) => {
     let count = 0
-    if (index1 === 0) {
+    if (index1 === 0) { // Bug si 1ère réponse fausse toutes les réponses bonnes suivantes non comptabilisées
       count += 1
       if (index2 === 0) 
         count += 1
@@ -102,9 +102,9 @@ let question1 = ['Langage', 'Compilateur']
             count += 1
             if (index5 === 0) 
               count += 1
-        console.log(chalk.blue(`Vous avez ${count} points sur 5!`))
+        console.log(chalk.green(`Vous avez ${count} points sur 5!`))
     } else {
-      console.log(chalk.blue(`Vous avez ${count} points sur 5!`))
+      console.log(chalk.green(`Vous avez ${count} points sur 5!`))
     }
   }
     
