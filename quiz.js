@@ -102,9 +102,9 @@ let question1 = ['Langage', 'Compilateur']
             count += 1
             if (index5 === 0) 
               count += 1
-        console.log(`Vous avez ${count} points sur 5!`)
+        console.log(chalk.blue(`Vous avez ${count} points sur 5!`))
     } else {
-      console.log(`Vous avez ${count} points sur 5!`)
+      console.log(chalk.blue(`Vous avez ${count} points sur 5!`))
     }
   }
     
