@@ -3,7 +3,10 @@
 le nombre d'éléments qui sera la base de la pyramide
 une string (un caractère) qui sera le motif à afficher contrairement à l'exemple du cours qui affiche par défaut le caractère *. */
 
+const readlineSync = require('readline-sync')
 const chalk = require('chalk')
+
+let start = readlineSync.question('please usage: node pyramid.js.js number string to display pyramid')
 
 const showStars = (nbStars) => {
     for (let i = 1; i <= nbStars; i += 1) {
