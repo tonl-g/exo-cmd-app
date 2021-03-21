@@ -20,7 +20,7 @@ const chalk = require('chalk')
 let start = readlineSync.question('please usage: node interMajorityTest.js firstName, lastName and age')
 
 const americanCanVote = (usFirstName, usLastName, usAge) => {
-    if (usAge <21) {
+    if (usAge < 21) {
     console.log(chalk.red(`Désolé, étant américain ${usFirstName} ${usLastName}, vous êtes mineur, vous ne pouvez pas voter!`))
 } else { (usAge >= 21) 
     console.log(chalk.blue(console.log(`Etant américain ${usFirstName} ${usLastName}, vous êtes majeur, vous pouvez voter!`)))
