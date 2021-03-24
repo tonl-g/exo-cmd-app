@@ -25,14 +25,15 @@ Utiliser readline-sync pour l'interaction avec l'utilisateur. */
 const readlineSync = require('readline-sync')
 const chalk = require('chalk')
 
+let count = 0
+
 let question1 = ['Langage', 'Compilateur']
   let index1 = readlineSync.keyInSelect(question1, 'Question 1: Le C++ est un:')
   switch (index1) {
     case 0:
-      console.log('Langage')
+      count++
       break
     case 1:
-      console.log('Compilateur')
       break
     default:
       console.log(chalk.red('Please select between réponse 1 or réponse 2'))
@@ -42,10 +43,9 @@ let question1 = ['Langage', 'Compilateur']
   let index2 = readlineSync.keyInSelect(question2, 'TypeScript est une évolution de Javascript:')
   switch (index2) {
     case 0:
-      console.log('Vrai')
+      count++
       break
     case 1:
-      console.log('Faux')
       break
     default:
       console.log(chalk.red('Please select between réponse 1 or réponse 2'))
@@ -55,10 +55,9 @@ let question1 = ['Langage', 'Compilateur']
   let index3 = readlineSync.keyInSelect(question3, 'Lire les cours avant de faire les exercices est inutile:')
   switch (index3) {
     case 0:
-      console.log('Vrai')
       break
     case 1:
-      console.log('Faux')
+      count++
       break
     default:
       console.log(chalk.red('Please select between réponse 1 or réponse 2'))
@@ -68,10 +67,9 @@ let question1 = ['Langage', 'Compilateur']
   let index4 = readlineSync.keyInSelect(question4, 'react.js a été developpé par Google:')
   switch (index4) {
     case 0:
-      console.log('Vrai')
       break
     case 1:
-      console.log('Faux')
+      count++
       break
     default:
       console.log(chalk.red('Please select between réponse 1 or réponse 2'))
@@ -81,33 +79,15 @@ let question1 = ['Langage', 'Compilateur']
   let index5 = readlineSync.keyInSelect(question5, 'Ethereum est une blockchain publique:')
   switch (index5) {
     case 0:
-      console.log('Vrai')
+      count++
       break
     case 1:
-      console.log('Faux')
       break
     default:
       console.log(chalk.red('Please select between réponse 1 or réponse 2'))
   }
 
-  const countPoint = (counter) => {
-    let count = 0
-    if (index1 === 0) { // Bug si 1ère réponse fausse toutes les réponses bonnes suivantes non comptabilisées
-      count += 1
-      if (index2 === 0) 
-        count += 1
-        if (index3 === 1) 
-          count += 1
-          if (index4 === 1) 
-            count += 1
-            if (index5 === 0) 
-              count += 1
-        console.log(chalk.green(`Vous avez ${count} points sur 5!`))
-    } else {
-      console.log(chalk.green(`Vous avez ${count} points sur 5!`))
-    }
-  }
-    
-countPoint()
+  
+console.log(chalk.green(`Vous avez ${count} points sur 5!`))
 
 
