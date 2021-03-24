@@ -87,7 +87,6 @@ let question1 = ['Langage', 'Compilateur']
       console.log(chalk.red('Please select between réponse 1 or réponse 2'))
   }
 
-  
 console.log(chalk.green(`Vous avez ${count} points sur 5!`))
 
 
